@@ -5,8 +5,8 @@
 # ------------------------------------------------------------------------------
 
 variable "users" {
-  type        = map(object({ role = string }))
   description = "A map whose keys are the usernames of each database user and whose values are a map containing supported user attributes.  The only currently-supported attribute is \"role\" (string).  The only currently-supported roles are \"read_only\" and \"read_write\".  Example: { \"firstname1.lastname1\" = { \"role\" = \"read_only\" }, \"firstname2.lastname2\" = { \"role\" = \"read_write\" } }"
+  type        = map(object({ role = string }))
 }
 
 # ------------------------------------------------------------------------------
