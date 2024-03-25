@@ -8,6 +8,7 @@ data "aws_iam_policy_document" "assume_userservices_was_db_read_write_role_doc" 
 
     resources = [
       data.terraform_remote_state.userservices_was_db_staging.outputs.read_write_role.arn,
+      data.terraform_remote_state.userservices_was_db_production.outputs.read_write_role.arn,
     ]
   }
 }
