@@ -1,5 +1,5 @@
 # IAM policy document that allows assumption of the WAS DB read-only role in the
-# User Services account
+# User Services staging and production accounts
 data "aws_iam_policy_document" "assume_userservices_was_db_read_only_role_doc" {
   statement {
     actions = [

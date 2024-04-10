@@ -85,10 +85,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| assume\_userservices\_was\_db\_read\_only\_policy\_description | The description of the IAM policy that allows assumption of the WAS DB read-only role in the User Services account. | `string` | `"Allows assumption of the WAS DB read-only role in the User Services account."` | no |
-| assume\_userservices\_was\_db\_read\_only\_policy\_name | The name of the IAM policy that allows assumption of the WAS DB read-only role in the User Services account. | `string` | `"AssumeUserServicesWASDBReadOnlyRole"` | no |
-| assume\_userservices\_was\_db\_read\_write\_policy\_description | The description of the IAM policy that allows assumption of the WAS DB read-write role in the User Services account. | `string` | `"Allows assumption of the WAS DB read-write role in the User Services account."` | no |
-| assume\_userservices\_was\_db\_read\_write\_policy\_name | The name of the IAM policy that allows assumption of the WAS DB read-write role in the User Services account. | `string` | `"AssumeUserServicesWASDBReadWriteRole"` | no |
+| assume\_userservices\_was\_db\_read\_only\_policy\_description | The description of the IAM policy that allows assumption of the WAS DB read-only role in the User Services staging and production accounts. | `string` | `"Allows assumption of the WAS DB read-only role in the User Services staging and production accounts."` | no |
+| assume\_userservices\_was\_db\_read\_only\_policy\_name | The name of the IAM policy that allows assumption of the WAS DB read-only role in the User Services staging and production accounts. | `string` | `"AssumeUserServicesWASDBReadOnlyRole"` | no |
+| assume\_userservices\_was\_db\_read\_write\_policy\_description | The description of the IAM policy that allows assumption of the WAS DB read-write role in the User Services staging and production accounts. | `string` | `"Allows assumption of the WAS DB read-write role in the User Services staging and production accounts."` | no |
+| assume\_userservices\_was\_db\_read\_write\_policy\_name | The name of the IAM policy that allows assumption of the WAS DB read-write role in the User Services staging and production accounts. | `string` | `"AssumeUserServicesWASDBReadWriteRole"` | no |
 | aws\_region | The AWS region to deploy into (e.g. us-east-1). | `string` | `"us-east-1"` | no |
 | read\_only\_users\_group\_name | The name of the IAM group for WAS database users with read-only access. | `string` | `"was_db_read_only_users"` | no |
 | read\_write\_users\_group\_name | The name of the IAM group for WAS database users with read-write access. | `string` | `"was_db_read_write_users"` | no |
