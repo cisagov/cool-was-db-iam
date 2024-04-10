@@ -1,24 +1,9 @@
-output "arn" {
-  value       = aws_instance.example.arn
-  description = "The EC2 instance ARN."
+output "read_only_users_group" {
+  description = "The IAM group for WAS database users with read-only access."
+  value       = aws_iam_group.read_only_users
 }
 
-output "availability_zone" {
-  value       = aws_instance.example.availability_zone
-  description = "The AZ where the EC2 instance is deployed."
-}
-
-output "id" {
-  value       = aws_instance.example.id
-  description = "The EC2 instance ID."
-}
-
-output "private_ip" {
-  value       = aws_instance.example.private_ip
-  description = "The private IP of the EC2 instance."
-}
-
-output "subnet_id" {
-  value       = aws_instance.example.subnet_id
-  description = "The ID of the subnet where the EC2 instance is deployed."
+output "read_write_users_group" {
+  description = "The IAM group for WAS database users with read-write access."
+  value       = aws_iam_group.read_write_users
 }
