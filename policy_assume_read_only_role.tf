@@ -2,9 +2,12 @@
 # User Services account
 data "aws_iam_policy_document" "assume_userservices_was_db_read_only_role_doc" {
   statement {
-    effect = "Allow"
+    actions = [
+      "sts:AssumeRole",
+      "sts:TagSession",
+    ]
 
-    actions = ["sts:AssumeRole"]
+    effect = "Allow"
 
     resources = [
       data.terraform_remote_state.userservices_was_db_staging.outputs.read_only_role.arn,
