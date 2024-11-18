@@ -46,7 +46,7 @@ allowed to read from and write to the
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 1.0 |
+| terraform | ~> 1.1 |
 | aws | ~> 4.9 |
 
 ## Providers ##
