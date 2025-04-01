@@ -4,6 +4,11 @@
 # You must provide a value for each of these parameters.
 # ------------------------------------------------------------------------------
 
+variable "terraform_state_bucket" {
+  description = "The name of the S3 bucket where Terraform state is stored."
+  type        = string
+}
+
 variable "users" {
   description = "A map whose keys are the usernames of each database user and whose values are a map containing supported user attributes.  The only currently-supported attribute is \"role\" (string).  The only currently-supported roles are \"read_only\" and \"read_write\".  Example: { \"firstname1.lastname1\" = { \"role\" = \"read_only\" }, \"firstname2.lastname2\" = { \"role\" = \"read_write\" } }"
   nullable    = false
