@@ -22,29 +22,29 @@ variable "users" {
 # ------------------------------------------------------------------------------
 
 variable "assume_userservices_was_db_read_only_policy_description" {
-  default     = "Allows assumption of the WAS DB read-only role in the User Services staging and production accounts."
-  description = "The description of the IAM policy that allows assumption of the WAS DB read-only role in the User Services staging and production accounts."
+  default     = "Allows assumption of the WAS DB read-only role in the User Services account."
+  description = "The description of the IAM policy that allows assumption of the WAS DB read-only role in the User Services account."
   nullable    = false
   type        = string
 }
 
 variable "assume_userservices_was_db_read_only_policy_name" {
   default     = "AssumeUserServicesWASDBReadOnlyRole"
-  description = "The name of the IAM policy that allows assumption of the WAS DB read-only role in the User Services staging and production accounts."
+  description = "The name of the IAM policy that allows assumption of the WAS DB read-only role in the User Services account."
   nullable    = false
   type        = string
 }
 
 variable "assume_userservices_was_db_read_write_policy_description" {
-  default     = "Allows assumption of the WAS DB read-write role in the User Services staging and production accounts."
-  description = "The description of the IAM policy that allows assumption of the WAS DB read-write role in the User Services staging and production accounts."
+  default     = "Allows assumption of the WAS DB read-write role in the User Services account."
+  description = "The description of the IAM policy that allows assumption of the WAS DB read-write role in the User Services account."
   nullable    = false
   type        = string
 }
 
 variable "assume_userservices_was_db_read_write_policy_name" {
   default     = "AssumeUserServicesWASDBReadWriteRole"
-  description = "The name of the IAM policy that allows assumption of the WAS DB read-write role in the User Services staging and production accounts."
+  description = "The name of the IAM policy that allows assumption of the WAS DB read-write role in the User Services account."
   nullable    = false
   type        = string
 }
