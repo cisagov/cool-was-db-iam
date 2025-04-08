@@ -78,21 +78,21 @@ No modules.
 | [aws_iam_policy_document.assume_userservices_was_db_read_write_role_doc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 | [terraform_remote_state.master](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 | [terraform_remote_state.users](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
-| [terraform_remote_state.userservices_was_db_production](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
-| [terraform_remote_state.userservices_was_db_staging](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
+| [terraform_remote_state.userservices_was_db](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) | data source |
 
 ## Inputs ##
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| assume\_userservices\_was\_db\_read\_only\_policy\_description | The description of the IAM policy that allows assumption of the WAS DB read-only role in the User Services staging and production accounts. | `string` | `"Allows assumption of the WAS DB read-only role in the User Services staging and production accounts."` | no |
-| assume\_userservices\_was\_db\_read\_only\_policy\_name | The name of the IAM policy that allows assumption of the WAS DB read-only role in the User Services staging and production accounts. | `string` | `"AssumeUserServicesWASDBReadOnlyRole"` | no |
-| assume\_userservices\_was\_db\_read\_write\_policy\_description | The description of the IAM policy that allows assumption of the WAS DB read-write role in the User Services staging and production accounts. | `string` | `"Allows assumption of the WAS DB read-write role in the User Services staging and production accounts."` | no |
-| assume\_userservices\_was\_db\_read\_write\_policy\_name | The name of the IAM policy that allows assumption of the WAS DB read-write role in the User Services staging and production accounts. | `string` | `"AssumeUserServicesWASDBReadWriteRole"` | no |
+| assume\_userservices\_was\_db\_read\_only\_policy\_description | The description of the IAM policy that allows assumption of the WAS DB read-only role in the User Services account. | `string` | `"Allows assumption of the WAS DB read-only role in the User Services account."` | no |
+| assume\_userservices\_was\_db\_read\_only\_policy\_name | The name of the IAM policy that allows assumption of the WAS DB read-only role in the User Services account. | `string` | `"AssumeUserServicesWASDBReadOnlyRole"` | no |
+| assume\_userservices\_was\_db\_read\_write\_policy\_description | The description of the IAM policy that allows assumption of the WAS DB read-write role in the User Services account. | `string` | `"Allows assumption of the WAS DB read-write role in the User Services account."` | no |
+| assume\_userservices\_was\_db\_read\_write\_policy\_name | The name of the IAM policy that allows assumption of the WAS DB read-write role in the User Services account. | `string` | `"AssumeUserServicesWASDBReadWriteRole"` | no |
 | aws\_region | The AWS region to deploy into (e.g. us-east-1). | `string` | `"us-east-1"` | no |
 | read\_only\_users\_group\_name | The name of the IAM group for WAS database users with read-only access. | `string` | `"was_db_read_only_users"` | no |
 | read\_write\_users\_group\_name | The name of the IAM group for WAS database users with read-write access. | `string` | `"was_db_read_write_users"` | no |
 | tags | Tags to apply to all AWS resources created. | `map(string)` | `{}` | no |
+| terraform\_state\_bucket | The name of the S3 bucket where Terraform state is stored. | `string` | n/a | yes |
 | users | A map whose keys are the usernames of each database user and whose values are a map containing supported user attributes.  The only currently-supported attribute is "role" (string).  The only currently-supported roles are "read\_only" and "read\_write".  Example: { "firstname1.lastname1" = { "role" = "read\_only" }, "firstname2.lastname2" = { "role" = "read\_write" } } | `map(object({ role = string }))` | n/a | yes |
 
 ## Outputs ##
