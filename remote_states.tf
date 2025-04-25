@@ -8,7 +8,7 @@ data "terraform_remote_state" "master" {
   backend = "s3"
 
   config = {
-    bucket         = "cisa-cool-terraform-state"
+    bucket         = var.terraform_state_bucket
     dynamodb_table = "terraform-state-lock"
     encrypt        = true
     key            = "cool-accounts/master.tfstate"
@@ -16,16 +16,14 @@ data "terraform_remote_state" "master" {
     region         = "us-east-1"
   }
 
-  # There is only one environment for this account, so there is
-  # no need to match the current Terraform workspace.
-  workspace = "production"
+  workspace = terraform.workspace
 }
 
 data "terraform_remote_state" "users" {
   backend = "s3"
 
   config = {
-    bucket         = "cisa-cool-terraform-state"
+    bucket         = var.terraform_state_bucket
     dynamodb_table = "terraform-state-lock"
     encrypt        = true
     key            = "cool-accounts/users.tfstate"
@@ -33,16 +31,14 @@ data "terraform_remote_state" "users" {
     region         = "us-east-1"
   }
 
-  # There is only one environment for this account, so there is
-  # no need to match the current Terraform workspace.
-  workspace = "production"
+  workspace = terraform.workspace
 }
 
-data "terraform_remote_state" "userservices_was_db_staging" {
+data "terraform_remote_state" "userservices_was_db" {
   backend = "s3"
 
   config = {
-    bucket         = "cisa-cool-terraform-state"
+    bucket         = var.terraform_state_bucket
     dynamodb_table = "terraform-state-lock"
     encrypt        = true
     key            = "cool-userservices-was-db/terraform.tfstate"
@@ -50,20 +46,5 @@ data "terraform_remote_state" "userservices_was_db_staging" {
     region         = "us-east-1"
   }
 
-  workspace = "staging"
-}
-
-data "terraform_remote_state" "userservices_was_db_production" {
-  backend = "s3"
-
-  config = {
-    bucket         = "cisa-cool-terraform-state"
-    dynamodb_table = "terraform-state-lock"
-    encrypt        = true
-    key            = "cool-userservices-was-db/terraform.tfstate"
-    profile        = "cool-terraform-backend"
-    region         = "us-east-1"
-  }
-
-  workspace = "production"
+  workspace = terraform.workspace
 }
