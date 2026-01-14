@@ -1,6 +1,8 @@
 # cool-was-db-iam #
 
 [![GitHub Build Status](https://github.com/cisagov/cool-was-db-iam/workflows/build/badge.svg)](https://github.com/cisagov/cool-was-db-iam/actions)
+[![License](https://img.shields.io/github/license/cisagov/cool-was-db-iam)](https://spdx.org/licenses/)
+[![CodeQL](https://github.com/cisagov/cool-was-db-iam/workflows/CodeQL/badge.svg)](https://github.com/cisagov/cool-was-db-iam/actions/workflows/codeql-analysis.yml)
 
 This project is used to manage IAM permissions for COOL users that are
 allowed to read from and write to the
