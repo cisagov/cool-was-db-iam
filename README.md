@@ -47,14 +47,14 @@ allowed to read from and write to the
 ## Requirements ##
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | terraform | ~> 1.1 |
 | aws | ~> 6.7 |
 
 ## Providers ##
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | aws | ~> 6.7 |
 | aws.users | ~> 6.7 |
 | terraform | n/a |
@@ -66,7 +66,7 @@ No modules.
 ## Resources ##
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_iam_group.read_only_users](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group) | resource |
 | [aws_iam_group.read_write_users](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group) | resource |
 | [aws_iam_group_policy_attachment.assume_userservices_was_db_read_only_role_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group_policy_attachment) | resource |
@@ -85,7 +85,7 @@ No modules.
 ## Inputs ##
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | assume\_userservices\_was\_db\_read\_only\_policy\_description | The description of the IAM policy that allows assumption of the WAS DB read-only role in the User Services account. | `string` | `"Allows assumption of the WAS DB read-only role in the User Services account."` | no |
 | assume\_userservices\_was\_db\_read\_only\_policy\_name | The name of the IAM policy that allows assumption of the WAS DB read-only role in the User Services account. | `string` | `"AssumeUserServicesWASDBReadOnlyRole"` | no |
 | assume\_userservices\_was\_db\_read\_write\_policy\_description | The description of the IAM policy that allows assumption of the WAS DB read-write role in the User Services account. | `string` | `"Allows assumption of the WAS DB read-write role in the User Services account."` | no |
@@ -100,7 +100,7 @@ No modules.
 ## Outputs ##
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | read\_only\_users\_group | The IAM group for WAS database users with read-only access. |
 | read\_write\_users\_group | The IAM group for WAS database users with read-write access. |
 <!-- END_TF_DOCS -->
